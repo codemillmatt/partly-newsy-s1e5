@@ -3,7 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:PartlyNewsy.Core"
-    x:Class="PartlyNewsy.Core.AppShellPage"
+    x:Class="PartlyNewsy.Core.AppShellPage" 
     Shell.TabBarTitleColor="Red">
 
     <Shell.Resources>
@@ -24,8 +24,15 @@
         </ResourceDictionary>
     </Shell.Resources>
 
+    <Shell.FlyoutHeader>
+        <StackLayout>
+            <Label Text="Hi"/>
+        </StackLayout>
+    </Shell.FlyoutHeader>
+
     <TabBar>
-        <Tab Title="News" Shell.NavBarIsVisible="False">
+
+        <Tab Shell.NavBarIsVisible="False">
             <Tab.Icon>
                 <FontImageSource FontFamily="{StaticResource FabMDL2}" Glyph="&#xE900;" />
             </Tab.Icon>
@@ -36,7 +43,7 @@
                 <local:NewsCollectionPage />
             </ShellContent>            
         </Tab>
-        <Tab Title="My Interests">
+        <Tab>
             <Tab.Icon>
                 <FontImageSource FontFamily="{StaticResource FabMDL2}" Glyph="&#xE734;" />
             </Tab.Icon>
@@ -44,7 +51,7 @@
                 <local:MyInterestsPage />
             </ShellContent>
         </Tab>
-        <Tab Title="Search">
+        <Tab>
             <Tab.Icon>
                 <FontImageSource FontFamily="{StaticResource FabMDL2}" Glyph="&#xE721;" />
             </Tab.Icon>
@@ -52,7 +59,7 @@
                 <local:SearchPage />
             </ShellContent>
         </Tab>
-        <Tab Title="Local News">
+        <Tab>
             <Tab.Icon>
                 <FontImageSource FontFamily="{StaticResource FabMDL2}" Glyph="&#xE707;" />
             </Tab.Icon>
@@ -60,7 +67,7 @@
                 <local:NewsCollectionPage Shell.NavBarIsVisible="True" />
             </ShellContent>
         </Tab>
-        <Tab Title="Settings">
+        <Tab>
             <Tab.Icon>
                 <FontImageSource FontFamily="{StaticResource FabMDL2}" Glyph="&#xE713;"/>
             </Tab.Icon>
@@ -69,5 +76,4 @@
             </ShellContent>
         </Tab>
     </TabBar>
-
 </Shell>

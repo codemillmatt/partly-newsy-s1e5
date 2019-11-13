@@ -23,7 +23,7 @@
 	<key>MinimumOSVersion</key>
 	<string>8.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>PartlyNewsy</string>
+	<string>Newsy 7</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.microsoft.PartlyNewsyEp4</string>
 	<key>CFBundleVersion</key>
