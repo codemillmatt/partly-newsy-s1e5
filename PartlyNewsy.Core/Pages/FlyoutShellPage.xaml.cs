@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace PartlyNewsy.Core.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class FlyoutShellPage : ContentPage
+    public partial class FlyoutShellPage : Shell
     {
         public FlyoutShellPage()
         {

@@ -2,6 +2,7 @@
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Auth;
 using PartlyNewsy.Core;
+using PartlyNewsy.Core.Pages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,7 +14,8 @@ namespace PartlyNewsy
         {
             InitializeComponent();
 
-            MainPage = new AppShellPage();
+            //MainPage = new AppShellPage();
+            MainPage = new FlyoutShellPage();
 
             Routing.RegisterRoute("articledetail", typeof(ArticleDetailPage));
         }

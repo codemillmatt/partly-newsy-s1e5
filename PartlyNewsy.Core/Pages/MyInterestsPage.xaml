@@ -12,7 +12,7 @@
                    TextColor="#171717"
                    FontSize="24"
                    FontAttributes="Bold"
-                   Margin="-10,14,0,0"
+                   Margin="-25,5,0,0"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
                    VerticalOptions="Center"

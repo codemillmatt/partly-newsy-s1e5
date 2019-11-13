@@ -3,7 +3,159 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:PartlyNewsy.Core"
              mc:Ignorable="d"
-             x:Class="PartlyNewsy.Core.Pages.FlyoutShellPage">
+             x:Class="PartlyNewsy.Core.Pages.FlyoutShellPage"
+             Shell.TitleColor="Red">
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="#F2F2F2" />
+                <Setter Property="Shell.ForegroundColor" Value="#171717" />
+                <Setter Property="Shell.TitleColor" Value="#171717" />
+                <Setter Property="Shell.DisabledColor" Value="#FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="Silver" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#F2F2F2" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="Red"/>
+                <Setter Property="Shell.TabBarUnselectedColor"
+                        Value="#A0A0A0"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="Red"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
+   
+    <Shell.FlyoutHeader>
+        <StackLayout
+            HeightRequest="100"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center"
+            BackgroundColor="White">
+
+            <Image HeightRequest="100" WidthRequest="100">
+                <Image.Source>
+                    <FontImageSource
+                        Color="Red"
+                        FontFamily="{StaticResource FabMDL2}"
+                        Glyph="&#xE900;" />
+                </Image.Source>
+            </Image>
+            
+        </StackLayout>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="The News">        
+        <FlyoutItem.Icon>
+            <FontImageSource
+                Color="Red"
+                FontFamily="{StaticResource FabMDL2}"
+                Glyph="&#xE900;" />
+        </FlyoutItem.Icon>
+        <Tab Title="My News">
+            <ShellContent Title="My News">
+                <local:NewsCollectionPage Title="My News" />
+            </ShellContent>
+            <ShellContent Title="Top News">
+                <local:NewsCollectionPage Title="Top News" />
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="My Interests">
+        <FlyoutItem.Icon>
+            <FontImageSource
+                Color="Red"
+                FontFamily="{StaticResource FabMDL2}"
+                Glyph="&#xE734;" />
+        </FlyoutItem.Icon>
+        <ShellContent>
+            <local:MyInterestsPage />
+        </ShellContent>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Search">
+        <FlyoutItem.Icon>
+            <FontImageSource
+                Color="Red"
+                FontFamily="{StaticResource FabMDL2}"
+                Glyph="&#xE721;" />
+        </FlyoutItem.Icon>
+        <local:SearchPage />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Local News">
+        <FlyoutItem.Icon>
+            <FontImageSource
+                Color="Red"
+                FontFamily="{StaticResource FabMDL2}"
+                Glyph="&#xE707;" />
+        </FlyoutItem.Icon>
+        <ShellContent>
+            <local:NewsCollectionPage />
+        </ShellContent>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Settings">
+        <FlyoutItem.Icon>
+            <FontImageSource
+                Color="Red"
+                FontFamily="{StaticResource FabMDL2}"
+                Glyph="&#xE713;"/>
+        </FlyoutItem.Icon>
+        <ShellContent>
+            <local:SettingsPage/>
+        </ShellContent>
+    </FlyoutItem>
+
+    <MenuItem Text="- Display Options -"/>
+
+    <MenuItem>
+        <Shell.MenuItemTemplate>
+            <DataTemplate>
+                <StackLayout Padding="16,0,0,0" Orientation="Horizontal">
+                    <Label FontFamily="{StaticResource SegMDL2}" Text="&#xECA5;" VerticalTextAlignment="Center" FontSize="18" TextColor="Red" />
+                    <Label Text="Standard" FontSize="14" VerticalTextAlignment="Center"
+                           Margin="17,0"/>
+                    <Label FontFamily="{StaticResource SegMDL2}" Text="&#xE73E;"
+                           Margin="0,0,20,0"
+                           VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"
+                           FontSize="18" TextColor="Red" />
+                </StackLayout>
+            </DataTemplate>
+        </Shell.MenuItemTemplate>
+    </MenuItem>
+
+    <MenuItem>
+        <Shell.MenuItemTemplate>
+            <DataTemplate>
+                <StackLayout Padding="16,0,0,0" Orientation="Horizontal">
+                    <Label FontFamily="{StaticResource SegMDL2}" Text="&#xE71D;" VerticalTextAlignment="Center" FontSize="18" TextColor="Red" />
+                    <Label Text="Compact" FontSize="14" VerticalTextAlignment="Center"
+                           Margin="17,0"/>
+                    <Label FontFamily="{StaticResource SegMDL2}" Text=""
+                           Margin="0,0,20,0"
+                           VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"
+                           FontSize="18" TextColor="Red" />
+                </StackLayout>
+            </DataTemplate>
+        </Shell.MenuItemTemplate>
+    </MenuItem>
+
+    <MenuItem>
+        <Shell.MenuItemTemplate>
+            <DataTemplate>
+                <StackLayout Padding="16,0,0,0" Orientation="Horizontal">
+                    <Label FontFamily="{StaticResource SegMDL2}" Text="&#xEA37;" VerticalTextAlignment="Center" FontSize="18" TextColor="Red" />
+                    <Label Text="Text-Only" FontSize="14" VerticalTextAlignment="Center"
+                           Margin="17,0"/>
+                    <Label FontFamily="{StaticResource SegMDL2}" Text=""
+                           Margin="0,0,20,0"
+                           VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"
+                           FontSize="18" TextColor="Red" />
+                </StackLayout>
+            </DataTemplate>
+        </Shell.MenuItemTemplate>
+    </MenuItem>
 
 </Shell>
