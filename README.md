@@ -2,7 +2,7 @@ Welcome back to Partly Cloudy! The show where you learn how to build a cloud-con
 
 # Episode Recap
 
-This episode saw us add some user interface polish by harnessing yet more power of [Xamarin.Forms Shell](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/?WT.mc_id=partlycloudy-github-masoucou).
+This episode saw us add some user interface polish by harnessing yet more power of [Xamarin.Forms Shell](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/?WT.mc_id=mobile-0000-masoucou).
 
 In episode 3, we used Shell to give the app a basic UI structure and to provide navigation between pages.
 
@@ -10,11 +10,11 @@ But Shell does more. And we explored some of that extra power by showing how we 
 
 And we also added in a custom view and modified the back button in the navigation bar too!
 
-If you haven't yet, [go check the episode out on Ch9](https://channel9.msdn.com/Shows/Partly-Cloudy/If-The-Shell-Fits-Fill-out-the-rest-of-the-app?WT.mc_id=partlycloudy-github-masoucou)!
+If you haven't yet, [go check the episode out on Ch9](https://channel9.msdn.com/Shows/Partly-Cloudy/If-The-Shell-Fits-Fill-out-the-rest-of-the-app?WT.mc_id=mobile-0000-masoucou)!
 
 ## What We're Going To Do
 
-In this post, I want to take a little closer look at how to use Shell to [build up the tabs](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/tabs?WT.mc_id=partlycloudy-github-masoucou), custom navigation bars, and styles.
+In this post, I want to take a little closer look at how to use Shell to [build up the tabs](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/tabs?WT.mc_id=mobile-0000-masoucou), custom navigation bars, and styles.
 
 Then I'll dive a bit into how we could build up a flyout menu that replaces the `TabBar` functionality. If you don't like tabs - you could have a flyout instead!
 
@@ -84,11 +84,11 @@ Pop that little tidbit into your other style definitions and then title (and ima
 
 And speaking of tab images - you can add some easily via the `Tab.Icon` property. In fact, check out the code in the repo on how I added some images using a a font with glyphs.
 
-Tabs aren't the only thing you can style in Shell. You can style entire pages that appear within the Shell, title colors in nav bars, disabled colors, and so on. [Check out this article](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/configuration?WT.mc_id=partlycloudy-github-masoucou) for more info.
+Tabs aren't the only thing you can style in Shell. You can style entire pages that appear within the Shell, title colors in nav bars, disabled colors, and so on. [Check out this article](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/configuration?WT.mc_id=mobile-0000-masoucou) for more info.
 
 ### Customizing Nav Bars
 
-Speaking of customizing ... [making the navigation bars look exactly the way you want](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/configuration?WT.mc_id=partlycloudy-github-masoucou#display-views-in-the-navigation-bar) them to is a matter of adding a little bit of code to Shell.
+Speaking of customizing ... [making the navigation bars look exactly the way you want](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/configuration?WT.mc_id=mobile-0000-masoucou#display-views-in-the-navigation-bar) them to is a matter of adding a little bit of code to Shell.
 
 We gave our nav bars some extra fat fonts for the title and positioned them exactly where we wanted to using this code:
 
@@ -128,7 +128,7 @@ In our app, we changed the button to display a stylized chevron for the back but
 
 ## Fly Me To The Moon
 
-Shell isn't just limited to tabs though - we can add on a [flyout menu](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout?WT.mc_id=partlycloudy-github-masoucou) too. You may be accustomed to seeing those via a hamburger icon in some apps.
+Shell isn't just limited to tabs though - we can add on a [flyout menu](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout?WT.mc_id=mobile-0000-masoucou) too. You may be accustomed to seeing those via a hamburger icon in some apps.
 
 So I want to show you how to do this. In the finished app, we won't have a flyout - but just for this extra special bonus section - we will.
 
